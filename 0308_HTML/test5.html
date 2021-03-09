@@ -1,0 +1,116 @@
+<!-- 
+0308_HTML5
+-> https://www.w3schools.com : Web Programming
+-> 핵심 학습 -> 취업 후 분야에 맞는 학습 개발
+-> " ",  ' ' 같은 표현
+-> Domain : 네트워크상에서 컴퓨터를 식별하는 호스트명을 가리킴
+
+-> Tomcat에서 html문서 서비스 등록하기 
+1) /HOME/tomcat-9.0/webapps/start 폴더 생성                 
+   - *.jsp, *.html, *.js, image, css, folder등이 위치
+
+2) /HOME/tomcat-9.0/webapps/start/WEB-INF 폴더 생성
+   - *.xml 환경 설정 파일이 위치, 이곳은 Client 접속 no
+   - 반드시 대문자로 폴더명이 되어 있어야
+   - 잘못된 예: web-inf, WEB_INF, Web-Inf 대소문자 철저 구분 
+
+3) /HOME/tomcat-9.0/webapps/start/WEB-INF/classes
+   - JAVA class 파일인 서블릿이 위치
+   - JSP Beans등이 위치. 
+
+4) 폴더 구조 확인하기
+   C:/HOME/TOMCAT-9.0/WEBAPPS/START
+   └─WEB-INF
+       └─classes
+
+5) 실행 소스 저장
+C:/HOME/html' 폴더를 '/tomcat-9.0/webapps/start' 폴더로 복사
+
+6) Server On 후 Client로 접속
+ 1) http://127.0.0.1:9090/start/html/gallery1.html    
+	← 127.0.0.1는 현재 컴퓨터의 기본 IP 
+ 2) http://localhost:9090/start/html/gallery1.html     
+   ← localhost는 현재 컴퓨터의 별명
+ 3) http://172.16.12.100:9090/start/html/gallery1.html ← 사설 고정 IP의 접속
+-->
+
+<!DOCTYPE HTML>   ← HTML5 선언문, 프롤로그
+<HTML>
+ <HEAD>
+  <META charset="EUC-KR">
+  <TITLE> /html/test5.html </TITLE>
+ </HEAD>
+ 
+ <BODY>
+ <!-- 주석, 설명문, 실행과 관련 없음 -->
+   HTML, CSS, Javascript, JSP를 이용한 Web Application 제작 과정
+<!--
+     <H> 태그
+     제목을 나타내는 태그, H1 ~ H6, 제목 글자 크기, 소문자를 권장
+	 태그는 열고 닫는 태그(/)를 짝으로 구현하며, <br>태그 처럼 닫는 태그를 생략하는 경우도
+-->
+   <H1>대분류</H1>
+   <H2>중분류</H2>
+   <H3>소분류</H3>
+   <H4>세분류</H4>
+   <H5>세세분류</H5>
+   <H6>항목</H6>
+	
+<!-- 
+	<IMG>, <BR>, <A> 태그
+	<IMG> : IMG: 이미지 출력, '/' 닫는 태그는 필요 no
+		  : src(속성), width(가로), height(세로)
+		  <IMG src='./xmas01.jpg' width: '500px;'>
+	<BR> : 이미지 출력 후 줄을 변경합니다. '/' 닫는 태그 필요 no
+	<A> : 링크를 적용, 이동할 파일이나 도메인 주소를 정의 가능
+	      <A href='./xmas01.jpg'><IMG src='./xmas01.jpg' width='25%'></A>
+-->
+	
+<!-- A: Hyper Link 지원, 마우스 클릭 기능, 클릭 후 이동할 주소 명시-->
+	<A href="http://www.naver.com">1. Naver</A>  
+	<A href="http://m.naver.com">2. Naver Mobile</A>
+
+<!-- target='_blank' keyword로 새로운 브라우저에서 실행 -->
+	<A href="https://www.kma.go.kr" target='_blank'>3. 기상청</A>
+
+<!-- IMage load -->
+<!-- ./는 root dic -->
+	<A href='./sw16.jpg'>여행 가고 싶은 곳</A>
+	<A href='./sw16.jpg' target="_blank">여행 가고 싶은 곳</A>
+	<br><br>	
+<!-- width: xx%; -->
+	<IMG src="./sw04.jpg" style="width: 20%;">
+	<br>
+
+<!-- href로 기본 이미지 + IMG로 클릭시 출력 할 이미지 -->
+	<A href="./sw13.jpg"><IMG src="./sw13.jpg" style="width: 20%;"></A>
+	<A href="./sw12.jpg"><IMG src="./sw12.jpg" style="width: 20%;"></A>
+	<br>
+	<A href="./sw16.jpg"><IMG src="./sw16.jpg" style="width: 20%;"></A>
+	<A href="./sw36.jpg"><IMG src="./sw36.jpg" style="width: 20%;"></A>
+
+<!--
+	<UL>, <OL>, <LI> 목록을 출력하는 태그
+   - <UL>: Unordered List, 순서 없는 목록
+   - <OL>: Ordered List, 순서 있는 목록
+   - <LI>: List Item, 목록 항목을 나타냄. <BR> 기능을 가짐
+-->
+   <H2>4계절</H2> 
+   <UL>			<!-- Unordered List, 순서 없는 목록 -->
+     <LI>봄</LI>
+     <LI>여름</LI>
+     <LI>가을</LI>
+     <LI>겨울</LI>
+   </UL>
+   
+   <H2>계절별 꽃</H2>
+   <OL>			<!-- Ordered List, 순서 있는 목록 -->
+     <LI>개나리</LI>
+     <LI>목련</LI>
+     <LI>장미</LI>
+     <LI>튜울립</LI>
+     <LI>연꽃</LI>
+     <LI>국화</LI>
+   </OL>
+ </BODY>
+</HTML>
