@@ -1,0 +1,220 @@
+<!--
+0309
+- Tomcat에서 html문서 서비스 등록(대소문자 중요)
+1. 작업용 폴더를 생성
+ 1) /HOME/tomcat-9.0/webapps/start 폴더 생성                 
+   - *.jsp, *.html, *.js, image, css, folder 등이 위치 
+ 2) /HOME/tomcat-9.0/webapps/start/WEB-INF 폴더 생성
+   - *.xml 환경 설정 파일이 위치, 이곳은 Client가 접속 no
+   - 반드시 대문자로 폴더명이 되어 있어야
+   - 잘못된 예: web-inf, WEB_INF, Web-Inf 대소문자 철저 구분 ★ 
+ 3) /HOME/tomcat-9.0/webapps/start/WEB-INF/classes
+   - JAVA class 파일인 서블릿이 위치
+   - JSP Beans 등이 위치.
+2. 소스 복사
+   - 'C:/HOME/html' 폴더를 '/tomcat-9.0/webapps/start' 폴더로 복사
+3. 테스트
+dic : C:\ai8\tomcat-9.0\webapps\start\html
+- http://127.0.0.1:9090/start/html/test5.html     ← 127.0.0.1는 현재 컴퓨터의 기본 IP 
+- http://localhost:9090/start/html/test5.html     ← localhost는 현재 컴퓨터의 별명
+- http://220.121.148.7:9090/start/html/test5.html ← 사설 고정IP(220.121.148.7) : IpV4 주소
+  -> 다른 사람의 컴퓨터에서 접속
+
+-> 9090 Port : Tomcat의 Network 주소로 통신을 위한 내부 주소
+		  톰캣설치경로\conf\server.xml 설정파일을 변경
+- default(8080)를 사용하고 있는 다른 서비스와 충돌
+- Domain(ex. naver, daum)은 Port번호 사용 No, IP주소를 사용하는 경우만 Port 사용
+
+4. 방화벽에서 9090 포트 열기 : Web Sever, DB Server
+- 외부에서 해당 IP 주소에 접근이 가능
+순서 : 제어판 -> Windows 방화벽 -> 고급설정 
+-> 인바운드(들어오는) 규칙 -> 새 규칙 -> 포트 설정 -> 포트 입력(TCP, 9090) -> 연결허용 -> 적용 시기(도메인, 개인, 공용) -> 이름 입력 -> 정상 등록 확인 
+-> 아웃바운드(나가는) 규칙 -> 인바운드와 같은 방식
+* 이미지를 변경해도 이미지가 새로고침이 안되는 경우
+  Ctrl + Shift + Del -> 기간: 지난 1시간 선택, 캐시된 이미지 또는 파일 -> 삭제
+
+Chapter3.  STS(Eclipse) web project 진행시 추가 설정, 프로젝트 생성/삭제 실습
+[1] STS 4.6.0(Spring Tool Suite) 이상 설치, Data Management(SQL Development) 설치
+-> 기본설정
+http://soldeskit3.cafe24.com/pds/read.jsp?pdsgrpno=380&pdsno=18071&grpno=&col=&word=&currentPage=0&visible= 
+[01] STS(Spring Tool Suite) 
+- JAVA -> JSP -> Spring Legacy -> Spring Boot: STS(Eclipse 기반)
+★ STS 4.5.1 버전은 STS3 plug in이 설치 안됨으로 권장 안함, 정상적인 Spring 개발이 어려움.
+★ STS 4.8.0 버전은 Tomcat 관련 에러, Java class 인식에서 에러가 발생함으로 설치하지 말것.
+    - Spring Legacy Project에서 많이 발생됨.
+   - http://www.spring.io 접속
+   - 스프링 개발과 관련된 기능들을 개발자가 사용하기 편리하도록 지원
+   - 메이븐등의 플러그인 내장으로 개발 라이브러리 자동 다운로드 지원
+1. 다운로드
+1) Projects -> Spring Tools 4 접속
+2) WINDIWS 
+64-BIT     
+3) 64 BIT:
+ 'spring-tool-suite-4-4.6.0.RELEASE-e4.14.0-win32.win32.x86_64.self-extracting.jar' 다운
+4) 'spring-tool-suite-4-4.6.0.RELEASE-e4.14.0-win32.win32.x86_64.self-extracting.jar' 파일을 더블클릭하여 압축해제
+5) "sts-4.6.0.RELEASE" 폴더명을 "sts-4.6.0"로 폴더명을 변경하여 'C:\ai8' 폴더로 이동
+6) SpringToolSuite4.exe 실행
+7) 실행 중인 화면
+8) Work space 폴더 지정 - C:/ai8/ws_frame 폴더 지정
+
+2. 기본 설정
+1) 글꼴 설정
+- eclipse 기반 툴의 설정: Window -> Preferences 
+- 글꼴: General -> Apperance -> Colors and Fonts -> Basic -> Text Font 
+     
+- '@'으로 시작하는 글꼴은 글씨가 세로로 나오니 선택하지 마세요.
+    (글자 크기는 12 ~ 16이상 지정해주세요.)
+
+2) 취소 버퍼 크기 및 라인 번호 설정
+3) JAVA 파일은 'Java' 그룹에서 다시 추가 설정을 해야합니다. JAVA 파일에대한 TAB의 공백지정
+4) 'java'란 이름 뿐만아니라 'abc'등 아무 문자열이나 가능합니다.
+5) TAB의 지정
+   - Tab policy: 탭 정책을 'Space only'로 지정하여 탭을 공백으로 전환합니다.
+   - Indentation size: 클래스, 메소드, 제어문 사용시 들여쓰기를 2칸으로 합니다.
+                    일반적으로 2 ~ 4칸을 사용합니다.
+   - Tab size: 탭 키를 눌렀을 때 2칸식 이동하게합니다.
+6) JavaScript 설정
+  - JAVA와 같은 방법으로 들여쓰기기 설정
+    JavaScript -> Code Style -> Formatter로 이동하여 설정, JAVA 설정과 동일 
+  - JavaScript -> Editor -> Content Assist -> Enable auto activation 체크 선택 
+7) CSS 설정 :  - Web -> CSS Files -> Editor 
+8) HTML 설정 : - Web -> HTML Files -> Editor
+9) XML 설정 : - XML -> XML Files -> Editor 
+10) Install/Update 해제
+     Window -> Preferences -> Install/Update -> Automatic Updates 체크 해제
+
+3. UTF-8 설정(Window -> Preferences)
+   - Preferences -> General -> Workspace: UTF-8 설정
+   - Preferences -> General -> Contents Types -> Java Class Ffile -> Default encoding: UTF-8 설정 -> Update 클릭
+   - Preferences -> General -> Contents Types -> Text -> JSP -> Default encoding: UTF-8 설정 -> Update 클릭
+   - Preferences -> Web -> HTML files -> Encoding: ISO10646/Unicode(UTF-8) 설정
+   - Preferences -> Web -> CSS files -> Encoding: ISO10646/Unicode(UTF-8) 설정
+   - Preferences -> Web -> JSP files -> Encoding: ISO10646/Unicode(UTF-8) 설정
+   - Preferences -> XML -> XML files -> Encoding: ISO10646/Unicode(UTF-8) 설정
+
+[참고] Database Development 설치
+1) STS -> Help -> Install New Software 실행
+2) Work with: Eclipse version을 선택
+3) Database Development 선택
+4) License 동의
+5) 재시작
+
+[참고 1] STS 실행시 missing tools.jar 에러 처리
+▷ C:\ai8\sts-4.6.0\SpringToolSuite4.ini 변경
+-startup
+plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar
+--launcher.library
+plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.1.1100.v20190907-0426
+-product
+org.springframework.boot.ide.branding.sts4
+--launcher.defaultAction
+openFile
+-vm  ◀─ 추가
+C:\jdk1.8.0\bin\javaw.exe  ◀─ 추가
+-vmargs
+-Dosgi.requiredJavaVersion=1.8
+-Xms256m
+-Xmx1024m
+-XX:+UseG1GC
+-XX:+UseStringDeduplication
+--add-modules=ALL-SYSTEM
+
+[참고 2] 아래의 메시지와 함께 실행이 안되는 경우
+▷ C:\ai8\sts-4.6.0\SpringToolSuite4.ini 변경
+- -startup, --launcher.library 경로를 확인할 것.
+
++ HTML 이태릭 속성 해제
+1) CSS 설정: Preferences -> Web -> CSS Files -> Editor -> Syntax Coloring -> Property Value -> Italic 해제
+2) HTML 설정: Preferences -> Web -> HTML Files -> Editor -> Syntax Coloring -> Attribute Value -> Italic 해제
+
+-> 3. Web 프로젝트 생성부터
+http://soldeskit3.cafe24.com/pds/read.jsp?pdsgrpno=381&pdsno=18120&grpno=&col=&word=&currentPage=0&visible=
+[01] 웹 프로젝트 생성
+Eclipse Setting
+    Workspace: ws_java
+ Project Type: Dynamic Web Project
+         Name: jsp_test
+     . Target Runtime   : /작업 기준 폴더/tomcat-9.0
+     . Dynamic Web Module version:  3.1
+     . src                   : Java Source Directory, *.java 파일
+     . Configuration     : JAVA 1.8
+     . build/classes      : java 컴파일된 class 파일
+     . Context Root     : 실행시 URL상에 사용할 Application 이름,
+                             프로젝트 별명, 프로젝트명과 동일
+     . src                   : java source
+     . build/classes    : 컴파일된 java source
+     . Content Directory: jsp, web 관련 파일이 저장될 폴더
+     . 관련 주소: http://soldeskit4.cafe24.com/pdsv2/list.jsp 
+1) 프로젝트 생성
+2) Web을 개발하는 'Dynamic Web Project' 선택
+3) 'jsp_test' 프로로젝트명 지정, 톰캣의 설정
+4) Tomcat 8.0 또는 Tomcat 9.0 지정
+5) 톰캣 설치 경로 지정 - 한번 생성된 톰캣서버는 이후로 재사용됩니다.
+6) 서블릿 버전 3.1 지정(기본값) 
+7) src: Java source 폴더, build/class: 컴파일된 java class folder
+   (JAVA project source folder:  src, class 폴더: bin)
+8) Context root: browser에 출력할 프로젝트 별명, 개발시에만 사용,
+   서비스시에는 '/'가 자동 사용됨, 일반적으로 프로젝트명 그대로 사용.
+   - Content directory: HTML, CSS, Javascript, JSP, image 파일등 저장
+   - Generate web.xml deployment descriptor 체크: 추후 환경 설정을 위해 사용
+
+[02] Web 프로젝트의 삭제
+- 삭제시 체크 박스를 선택하면 프로젝트가 HDD에서 완전히 삭제됩니다.
+  체크하지 않으면 Eclipse에서 링크만 삭제되어 실제 프로젝트는 하드디스크에 남아있음
+ 
+[참고] 구형 서버인 경우 서블릿 버전을 2.5로 지정한 경우
+[참고] 기본 자바 1.8 버전을 변경하는 경우  -> configuration(프로젝트 생성창) -> modify(
+
+Chapter4.  JSP 스크립트 기본 문법, JSP 실행, JAVA 실행
+[01] JSP 스크립트 기본 문법
+http://soldeskit3.cafe24.com/pds/read.jsp?pdsgrpno=381&pdsno=18121&grpno=&col=&word=&currentPage=0&visible= 
+-> 기본설정
+[01] JSP 스크립트 기본 문법
+     - Java Logic을 구현하며 JAVA를 기반으로하는 문법입니다.
+       표식은 '<% %>'사용
+     - JSP 고유의 추가적인 기능을 지원하는 태그가 존재합니다.
+     - 자바 코드를 처리하여 출력 결과를 HTML과 CSS로 변환하여 출력합니다.
+     - WEB 환경에서 JAVA를 이용한 DBMS 접근을 처리합니다.
+1. 'core' 폴더 생성
+- 'WebContent' 선택 Folder name으로 'core' 입력
+2. JSP 페이지 파일의 생성 - 파일명: script1.jsp
+2. JSP 스크립틀릿 코드의 생성 및 실행 
+   - 일반적인 java 코드가 쓰임: <% ... JAVA 코드 명시 ... %>
+   - <% out.println(name); %>
+   - <% out.println(kuk + "<BR>"); %>
+   - Eclipse Web Page Editor
+     . HTML, CSS 편집시 처리 결과를 미리 보여줌
+3. JSP 실행
+- tomcat.bat를 실행하여 콘솔에서 톰캣 서버가 실행되고 있다면 종료하고 진행합니다.  ★
+- 톰캣 서버에 현재 프로젝트를 서비스 모드로 등록
+- 웹 서비스임으로 방화벽 해제
+
+4. Web 프로젝트의 구성
+1) 프로젝트 구조 확인
+C:/HOME/ws_frame>tree jsp_test
+폴더 PATH의 목록입니다.
+볼륨 일련 번호는 04C2-BA61입니다.
+C:/HOME/WS_FRAME/JSP_TEST
+├─.settings    <-- Eclipse에서 관리
+├─build
+│  └─classes
+│      └─jsp_test  <-- 컴파일된 JAVA class
+├─src
+│  └─jsp_test      <-- JAVA 소스
+└─WebContent
+    ├─core           <-- JSP
+    ├─META-INF
+    └─WEB-INF     <-- web.xml등 환경 설정 파일
+        └─lib         <-- 데이터베이스 Driver등 저장
+
+Chapter5. [05] 스크립틀릿(Scriptlet) 실습, 자바 코드상에서의 태그의 사용, HTML 기반 JSP 결과 출력, 표현식(Expression), P, DIV, SPAN, DL, DT, DD, pre, xmp 태그
+[01] 스크립틀릿(Scriptlet) 실습
+     - 자바 코드 주석
+       <% 
+        //  하나의 라인 주석          
+        /*... 여러라인 주석 ...*/ 
+       %>
+
+     - JSP 자체 주석
+       <%-- --%>
+--!>
