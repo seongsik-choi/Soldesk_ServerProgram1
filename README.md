@@ -9,3 +9,4 @@
 * 0309 : [05] Scriptlet 실습, 자바코드상 태그사용, HTML기반 JSP 결과출력, 표현식(Expression), P, DIV, SPAN, DL, DT, DD, ArrayImage1
 * 0310 : [05] Scriptlet 실습, ArrayImage2, pre, xmp 태그
 * 0310 : [06] JSP Template 설정(기초 설정) 1
+* 0310 : [07] Page 지시자(Directive), class import, request 내부 객체 실습
