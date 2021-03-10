@@ -1,14 +1,14 @@
 # 1) 서버 프로그래밍(화면 설계/화면 구현) 1(HTML5/CSS3/JSP)
-Tree Structure  
-  :/HOME/WS_FRAME/JSP_TEST  
+STS4(Spring Tool Suite4) Tree Structure  
+  C:/dic/WS_FRAME/jsp_test
 ├─.settings    <-- Eclipse에서 관리  
 ├─build  
 │  └─classes  
 │      └─jsp_test  <-- 컴파일된 JAVA class  
 ├─src  
 │  └─jsp_test      <-- JAVA 소스  
-└─WebContent  
-    ├─core           <-- JSP  
+└─WebContent       <-- Web Service를 위한 dic  
+    ├─core           <-- JSP(0309, 0310...)  
     ├─META-INF  
     └─WEB-INF     <-- web.xml등 환경 설정 파일  
         └─lib         <-- 데이터베이스 Driver등 저장     
