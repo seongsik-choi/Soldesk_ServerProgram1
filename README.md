@@ -1,4 +1,4 @@
-# 1) 서버 프로그래밍(화면 설계/화면구현) 1(HTML5/CSS3/JSP)
+# 1) 서버 프로그래밍(화면 설계/화면 구현) 1(HTML5/CSS3/JSP)
 
 * 0308 : Software 개론, 자바 언어의 이해, JDK1.8.0 설정
 * 0308 : STS 4.6.0(Spring Tool Suite) 이상 설치, Data Management(SQL Development) 설치
