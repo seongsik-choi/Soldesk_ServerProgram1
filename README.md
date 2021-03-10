@@ -1,4 +1,17 @@
 # 1) 서버 프로그래밍(화면 설계/화면 구현) 1(HTML5/CSS3/JSP)
+Tree Structure
+  :/HOME/WS_FRAME/JSP_TEST
+├─.settings    <-- Eclipse에서 관리
+├─build
+│  └─classes
+│      └─jsp_test  <-- 컴파일된 JAVA class
+├─src
+│  └─jsp_test      <-- JAVA 소스
+└─WebContent
+    ├─core           <-- JSP
+    ├─META-INF
+    └─WEB-INF     <-- web.xml등 환경 설정 파일
+        └─lib         <-- 데이터베이스 Driver등 저장   
 ___ 
 * 0308 : Software 개론, 자바 언어의 이해, JDK1.8.0 설정  
 * 0308 : STS 4.6.0(Spring Tool Suite) 이상 설치, Data Management(SQL Development) 설치  
