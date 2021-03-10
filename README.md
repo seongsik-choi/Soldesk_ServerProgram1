@@ -1,5 +1,5 @@
 # 1) 서버 프로그래밍(화면 설계/화면 구현) 1(HTML5/CSS3/JSP)
-***STS4(Spring Tool Suite4) Tree Structure***   
+##STS4(Spring Tool Suite4) Tree Structure  
   C:/dic/WS_FRAME/jsp_test
 ├─.settings    <-- Eclipse에서 관리  
 ├─build  
