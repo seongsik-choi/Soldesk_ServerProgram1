@@ -30,7 +30,7 @@ ___
 * 0311 : [09] GET, POST Form Data 전송 방식, TEXT, TEXTAREA, PASSWORD, CSS, type 기능
 * 0311 : [10] placeholder, autofocus, <SELECT> ~ <OPTION> 태그 실습  
 ___  
-* 0312 : [11] RADIO, CHECKBOX, FIELDSET 태그 실습   
+* 0312 : [11] RADIO, CHECKBOX, FIELDSET 태그 실습  
 * 0312 :
 ___ 
 
