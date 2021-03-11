@@ -9,6 +9,7 @@
 │  └─jsp_test      <-- JAVA 소스  
 └─WebContent       <-- Web Service를 위한 dic  
     ├─core           <-- JSP(0309, 0310...)  
+    ├─form           <-- JSP(0311_FORM)   
     ├─META-INF  
     └─WEB-INF     <-- web.xml등 환경 설정 파일  
         └─lib         <-- 데이터베이스 Driver등 저장     
