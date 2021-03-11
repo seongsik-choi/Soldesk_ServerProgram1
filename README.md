@@ -26,3 +26,5 @@ ___
 * 0310 : [06] JSP Template 설정(기초 설정) 1  
 * 0310 : [07] Page 지시자(Directive), class import, request 내부 객체 실습  
 ___ 
+* 0311 : [08] response 내부 객체, out 내부 객체, application 내부 객체의 사용  
+___ 
