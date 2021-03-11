@@ -28,7 +28,7 @@ ___
 ___ 
 * 0311 : [08] response 내부 객체, out 내부 객체, application 내부 객체의 사용  
 * 0311 : [09] GET, POST Form Data 전송 방식, TEXT, TEXTAREA, PASSWORD, CSS, type 기능
-* 0311 : [10] placeholder, autofocus, <SELECT> <OPTION> 태그 실습  
+* 0311 : [10] placeholder, autofocus, SELECT OPTION 태그 실습  
 ___  
 * 0312 : [11] RADIO, CHECKBOX, FIELDSET 태그 실습  
 * 0312 :
