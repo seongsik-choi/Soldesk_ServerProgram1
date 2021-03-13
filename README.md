@@ -9,6 +9,7 @@
 │  └─jsp_test      <-- JAVA 소스  
 └─WebContent       <-- Web Service를 위한 dic  
     ├─core           <-- JSP(0309, 0310...)  
+    ├─form           <-- JSP(0311_FORM)   
     ├─META-INF  
     └─WEB-INF     <-- web.xml등 환경 설정 파일  
         └─lib         <-- 데이터베이스 Driver등 저장     
@@ -27,4 +28,10 @@ ___
 * 0310 : [07] Page 지시자(Directive), class import, request 내부 객체 실습  
 ___ 
 * 0311 : [08] response 내부 객체, out 내부 객체, application 내부 객체의 사용  
+* 0311 : [09] GET, POST Form Data 전송 방식, TEXT, TEXTAREA, PASSWORD, CSS, type 기능
+* 0311 : [10] placeholder, autofocus, SELECT OPTION 태그 실습  
+___  
+* 0312 : [11] RADIO, CHECKBOX, FIELDSET 태그 실습  
+* 0312 : [12] 각종 태그의 초기값 설정, HTML 특수 문자 Entity, HTTP 상태 코드  
 ___ 
+
