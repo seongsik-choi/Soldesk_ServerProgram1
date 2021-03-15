@@ -1,5 +1,5 @@
 <%--
-0312_output_form2의 Action 부분
+0312_output_form2의 Action 부분 
 
  - 사용자가 입력한 값을 기반으로 출력하는 request.getParameter를 jsp 선언없이 한줄로 변경하는법
 // JSP : String travel1 = request.getParameter("travel1");
@@ -7,6 +7,8 @@
 
  -> 2) 여행할 국가(....)  <%=request.getParameter("travel1") %>
   A) HTML Code 내에서 request.getParameter 선언하여 실행하기
+  
++ 0315_9) 여행할 국가2(오스트리아, 아이슬란드, 스위스 : CheckBox)
 --%>
 
 <%@ page contentType="text/html; charset=UTF-8" %>
@@ -35,7 +37,7 @@
  <%-- &nbsp; 2) 여행할 국가(input를 이용한 직접 입력) : <%=travel1 %><br><br>--%>
  &nbsp; 2) 여행할 국가(input를 이용한 직접 입력)  <%=request.getParameter("travel1") %><br><br>
    
- &nbsp; 3) 여행 국가 기본 선택 (오스트리아, 단일선택) : <%=travel3 %><br><br>
+ &nbsp; 3) 여행 국가 기본 선택 (단일선택) : <%=travel3 %><br><br>
  &nbsp; 4) 여행 국가 기본 선택 2(아이슬란드, 단일선택) : <%=travel4 %><br><br>
  
  &nbsp; 5)여행 국가 선택 2(SELECT, 다중 선택) : <%= travel5.length %> 곳 선택<br>
@@ -50,7 +52,7 @@
  &nbsp; 6) 여행 국가 선택(radio box, 기본선택 되어있는 경우) : 
             <%=request.getParameter("travel6") %><br>
  
- &nbsp; 7) 여행 국가 선택(radiobox, 기본선택no, 선택안하면 선택하라고 반환) : 
+ &nbsp; 7) 여행 국가 선택(radio box, 기본선택no, 선택안하면 선택하라고 반환) : 
   <% 
   String travel7 =request.getParameter("travel7");
   if(travel7== null){
@@ -82,6 +84,24 @@
  %>
  </UL> 
   
+
+ <%
+  String travel9[] = request.getParameterValues("travel9");  
+  %>
+ &nbsp; 9) 여행할 국가2(오스트리아, 아이슬란드, 스위스 : CheckBox) : <%= travel9.length %> 곳 선택<br>
+  <UL style="list-style-type: decimal" >   <!-- UL Tag open -->
+  <% 
+        if(travel9 != null){
+          for(int i=0; i<travel9.length; i++){  %>    
+  <Li><%= travel9[i] %> </Li>
+ <%
+      }// end for
+    }// end if
+ %>
+ </UL> 
+  
+
+
 
 <!-- Form으로 돌아가기 위한 반환문 -->
 <A href="./t10_output_form2.jsp" >다시 시도</A>

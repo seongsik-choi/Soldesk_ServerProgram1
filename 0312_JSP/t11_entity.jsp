@@ -4,7 +4,10 @@
  - 태그명 자체를 출력하려면 지정된 코드명으로 선언
  - https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references
  - https://www.w3schools.com/charsets/ref_html_ascii.asp
- - ＆#32;: 공백으로 출력되어 인식이 안됨으로 ＆nbsp;을 사용 할 것.
+ 
+  ex) 10진수, 16진수 공백으로 출력되나 (웹에서는 1칸만 인정) &nbsp;을 사용 
+ - 10진수 : &#32;
+ - 16진수 : &#x20;
  
  [03] HTTP 상태 코드
 - https://ko.wikipedia.org/wiki/HTTP_%EC%83%81%ED%83%9C_%EC%BD%94%EB%93%9C
@@ -50,7 +53,6 @@
  &nbsp;A<BR>
  &nbsp;&nbsp;A<BR>
  &nbsp;&nbsp;&nbsp;A<BR> <!--  쉽게 탭키라 생각 -->
- 
  
  
 

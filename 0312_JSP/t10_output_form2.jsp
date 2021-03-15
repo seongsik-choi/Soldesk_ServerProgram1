@@ -9,6 +9,16 @@
 
  Q) 일반배열과(문자열 -> 배열형) 드롭다운(선택, 다중선택)
 - 3항 연산자: (조건)?참:거짓
+
++ 0315_9) 여행할 국가2(오스트리아, 아이슬란드, 스위스 : CheckBox)
+ -> CheckBox의 selected='selected'를 다르 방식으로 표현
+  ex) System.out.println("오스트리아, 아이슬란드, 스위스".indexOf("트리아"));    // 2(두번쨰  index 부터 존재)
+  ex) System.out.println("오스트리아, 아이슬란드, 스위스".indexOf("오스트리아")); // 0 
+  ex) System.out.println("오스트리아, 아이슬란드, 스위스".indexOf("스위스"));     // 13
+  -> .indexOF를 이용 : 문자열이 존재하면 0 이상의 값 return
+  
+  A)  <%=("오스트리아, 아이슬란드".indexOf(trips_array[i]) >= 0)?"checked='checked'":"" %>
+  
  --%>
 <%@ page contentType="text/html; charset=UTF-8" %>
 
@@ -48,7 +58,7 @@ String[] trips_array = trips.split("/");
            autofocus="autofocus" style="width: 70%;">  <BR><BR>
            <%-- placeholder="도움말": 입력 도움말 출력 --%>
 
-&nbsp; 3) 여행할 국가 기본 선택(오스트리아, 단일선택)
+&nbsp; 3) 여행할 국가 기본 선택(단일선택)
 <SELECT name="travel3">
   <%
   for (int i=0; i< trips_array.length; i++) { %>
@@ -83,7 +93,7 @@ String[] trips_array = trips.split("/");
 </SELECT><BR><BR>
 
 
-&nbsp; 6) 여행 국가 선택(radiobox, 기본선택 되어있는 경우)<br>
+&nbsp; 6) 여행 국가 선택(radio box, 기본선택 되어있는 경우)<br>
 <%
 for (int i=0; i < trips_array.length; i++) {
 %>
@@ -97,7 +107,7 @@ for (int i=0; i < trips_array.length; i++) {
 
   <%-- radio 버튼이 선택이 되지않은 경우-> 메모리 참조 no(null)
            Q) 선택되지않는 경우, if~else문을 통해 메시지 출력--%>
-&nbsp; 7) 여행 국가 선택(radiobox, 기본선택no, 선택안하면 선택하라고 반환)<br>
+&nbsp; 7) 여행 국가 선택(radio box, 기본선택no, 선택안하면 선택하라고 반환)<br>
 <%
 for (int i=0; i < trips_array.length; i++) {
 %>
@@ -137,15 +147,29 @@ for (int i=0; i < trips_array.length; i++) {
     <input type="checkbox" name="travel8" value="<%=trips_array[i]%>"
                <%=select("오스트리아, 아이슬란드, 스위스", trips_array[i]) %>><%=trips_array[i]%>
   </label><br>  
-  
+<%  
+}
+%>
+<br>
+    
+
+&nbsp; 9) 여행할 국가2(오스트리아, 아이슬란드, 스위스 : CheckBox)<br>
+<%
+for (int i=0; i < trips_array.length; i++) {
+  System.out.println("---------------------------------");
+  System.out.println("-> 전체 국가중에 " + trips_array[i] + " 비교");
+%>
+  <label style="cursor: pointer;">
+    <input type="checkbox" name="travel9" value="<%=trips_array[i]%>"
+               <%=("오스트리아, 아이슬란드".indexOf(trips_array[i]) >= 0)?"checked='checked'":"" %>>
+               <%=trips_array[i]%>
+  </label><br>
 <%  
 }
 %>
 <br>
 
-<br>     
   <button type="submit">등록</button> 
-
   </form>
 </body>
 </html>
