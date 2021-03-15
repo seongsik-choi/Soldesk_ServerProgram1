@@ -1,0 +1,67 @@
+<!-- 
+0315_5. Margin, Padding 사용
+ 2. DIV 태그 Radius 적용 
+ 
+ 1) 문자 및 태그 정렬
+   - text-align: center ▷ 내용을 가운데로 정렬
+ 
+ 2) radius 모서리 처리, 둥근 모서리의 상자 표현
+  - border-radius: 10px;
+  - border-top-left-radius: 10px;
+  - border-top-right-radius: 10px;
+  - border-bottom-right-radius: 10px;
+  - border-bottom-left-radius: 10px;'
+ 
+ 3) 그림자 처리
+    - 형식: text-shadow: h-shadow v-shadow blur color; → text-shadow: 3px 3px 3px gray; 
+    - h-shadow: 그림자의 가로위치
+    - v-shadow: 그림자의 세로위치
+    - blur: 그림자 번짐 정도
+    - color: 그림자 색깔
+ -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>style6.html</title>
+<style type="text/css">
+  *{ font-family: Malgun Gothic; font-size: 26px;}
+</style>
+</head>
+<body>
+  <DIV style="width: 50%;
+                   margin: 30px auto;
+                   border: solid 1px #000000; 
+                   padding: 5% 5%;
+                   text-align: center;
+                   
+                    /* 둥근 모서리 만들기 */
+                   border-top-left-radius: 20px;
+                   border-top-right-radius: 20px;
+                   border-bottom-left-radius: 20px;
+                   border-bottom-right-radius: 20px;">
+    1. HTML5<br>
+    2. CSS3<br>
+    3. Menu 설정    
+  </DIV>
+  
+  <DIV style="width: 50%;  /* 가변길이 지정 */
+                    margin: 30px auto; /*  */
+                    border: solid 1px #000000;
+                    padding: 5% 5%;
+                    text-align: center;
+                    
+                     /* 둥근 모서리 만들기  */
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    /* 그림자 처리 */
+                    text-shadow: 1px 1px 1px #FF0000;">                    
+    1. HTML5<br>
+    2. CSS3<br>
+    3. Menu 설정    
+  </DIV>
+  
+</body>
+</html>
