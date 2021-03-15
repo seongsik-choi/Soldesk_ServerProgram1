@@ -34,5 +34,5 @@ ___
 * 0312 : [11] RADIO, CHECKBOX, FIELDSET 태그 실습  
 * 0312 : [12] 각종 태그의 초기값 설정, HTML 특수 문자 Entity, HTTP 상태 코드  
 * t10_output_form2.jsp : SELECT OPTION, RADIO, CHECKBOX, request.getParameter, request.getParameterValues, .indexOf(배열[]>=0) 복습  
-___ 
-
+___   
+* 0315 : 배웠던 내용을 통한 프로그램 만들기(from, proc.jsp)  
