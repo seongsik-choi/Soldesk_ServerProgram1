@@ -8,7 +8,7 @@
 ├─src  
 │  └─jsp_test      <-- JAVA 소스  
 └─WebContent       <-- Web Service를 위한 dic  
-    ├─html           <-- HTML(0308)  
+      ├─html           <-- HTML(0308)  
     ├─core           <-- JSP(0309, 0310, 0311)   
     ├─form           <-- JSP(0311, 0312, 0315)    
     ├─css            <-- html(0315, 0316)   
