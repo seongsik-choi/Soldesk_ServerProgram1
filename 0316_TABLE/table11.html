@@ -1,0 +1,118 @@
+<!-- 0316
+ [과제] 테이블의 모든 선을 출력하지 말것, TH, TD 태그는 하단의 line만 출력
+ -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>table12.html</title>
+<style type="text/css">
+  *{ font-family: Malgun Gothic; font-size: 24px;}
+  
+  .table1 {
+    width: 90%;
+    margin: 10px auto;
+    border: none;
+    border-collapse: collapse;
+  }
+  .th1 {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 4px solid #FF0000;
+  background-color: #FFFFFF; /* default = 흰색이지만, 설정을 보여주기 위해 */
+  color : #555555;
+  }
+  .td1 {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #00e0e0;
+  background-color: #FFFFFF;
+  color: #555555;
+  text-align: : center;
+  }  
+  .td_img {
+    border-bottom: 1px solid #00e0e0;  /* .td1과 background-bottom line을 같게 설정
+                                                                      설정안하면 line이 잘려보임 */
+    background-color: #FFFFFF; /*default = 흰색이지만, 설정을 보여주기 위해 */
+    color: #555555;
+    text-align: center;
+    padding: 5px;  /* 이미지의 위치가 정렬이 안돼있음 */
+  }  
+
+</style>
+</head>
+<body>
+
+    <table class='table1'>
+    <colgroup>
+      <col style='width: 10%;' />
+      <col style='width: 15%;' />
+      <col style='width: 35%;' />
+      <col style='width: 10%;' />
+      <col style='width: 10%;' />
+      <col style='width: 20%;' />
+    </colgroup>
+   
+    <thead>
+      <TR>
+        <TH class='th1'>번호</TH>
+        <TH class='th1'>파일</TH>
+        <TH class='th1'>제목</TH>
+        <TH class='th1'>성명</TH>
+        <TH class='th1'>조회</TH>
+        <TH class='th1'>등록일</TH>
+      </TR>
+    </thead>
+    
+    <tbody>
+      <TR>
+        <TD class='td1'>1</TD>
+        <TD class='td_img' style='height: 100px;'>
+          <IMG src='./images/coffee01.jpg' style='width: 100%; display: block;'>
+        </TD>
+        <TD class='td1'>제목1</TD>
+        <TD class='td1'>성명1</TD>
+        <TD class='td1'>1</TD>
+        <TD class='td1'>2017-08-18</TD>
+      </TR>
+      
+      <TR>
+        <TD class='td1'>2</TD>
+        <TD class='td_img' style='height: 100px;'>
+          <IMG src='./images/coffee02.jpg' style='width: 100%; display: block;'>
+        </TD>
+        <TD class='td1'>제목2</TD>
+        <TD class='td1'>성명2</TD>
+        <TD class='td1'>2</TD>
+        <TD class='td1'>2017-08-18</TD>
+      </TR>
+      
+      <TR>
+        <TD class='td1'>3</TD>
+        <TD class='td_img' style='height: 100px;'>
+          <IMG src='./images/coffee03.jpg' style='width: 100%; display: block;'>
+        </TD>
+        <TD class='td1'>제목3</TD>
+        <TD class='td1'>성명3</TD>
+        <TD class='td1'>3</TD>
+        <TD class='td1'>2017-08-18</TD>
+      </TR>   
+      
+      <TR>
+        <TD class='td1'>4</TD>
+        <TD class='td_img' style='height: 100px;'>
+          <IMG src='./images/coffee04.jpg' style='width: 100%; display: block;'>
+        </TD>
+        <TD class='td1'>제목4</TD>
+        <TD class='td1'>성명4</TD>
+        <TD class='td1'>4</TD>
+        <TD class='td1'>2017-08-18</TD>
+      </TR>   
+      
+    </tbody>
+  </table>
+  
+</body>
+</html>

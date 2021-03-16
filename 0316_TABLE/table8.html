@@ -1,0 +1,81 @@
+<!--0316
+ [16] <COLGROUP>, 열결합, 행결합 실습, 테이블안의 내용 정렬
+   4. 열이 결합된 테이블
+   -> 제일 위 <th> 태그는 : 제일 하단의 테이블 개수로 분할
+   -> 그 밑 <td> 태그는 : 그 밑 하단의 테이블 개수로 분할
+   ex) <th rowspan="10" class='td_center'>Web 개발</th>  
+   
+   정리 : tr(행 오픈) -> th(행에 해당하는 컬럼의 제목)   /  tr(행 오픈) -> td(행에 해댕하는 열들을 출력)
+
+  -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>table8.html</title>
+<style type="text/css">
+  *{ font-family: Malgun Gothic; font-size: 26px;}
+  table {
+    border: solid 1px #000000;  /* 테이블 외곽선 지정 */
+    border-collapse: collapse;   /* cell 경계선 결합 */
+    width: 80%;
+    margin: 30px auto;
+  }
+  
+  th {
+    border: solid 1px #000000;  /* 외곽선 지정 */
+  }
+ 
+  td {
+    border: solid 1px #000000;  /* 외곽선 지정 */
+    text-align: center;
+  }
+  .td_center {
+    text-align: center;
+  } 
+</style>
+</head>
+<body>
+
+  <table>
+    <caption>4. 열이 결합된 테이블</caption>
+    
+    <!-- 10개로 분할 :  제일  하단의 최대 개수   / 4개로 분할 : 제일하단의 최대 개수 -->
+    <thead>
+      <tr>
+        <th colspan="10" class='td_center'>Web 개발</th>  
+        <th colspan="4" class='td_center'>4차 산업</th>  
+      </tr>
+    </thead>
+    
+      <!-- 5개로 분할 : 그밑의 하단의 개수 / ...  -->
+      <tr>
+        <td colspan="5" class='td_center'>Client</td>  
+        <td colspan="5" class='td_center'>Server</td>  
+        <td colspan="2" class='td_center'>BigData</td>  
+        <td class='td_center'>IOT</td>  
+        <td class='td_center'>AI</td>  
+      </tr>  
+
+      <tr>
+        <td class='td_center'>HTML5</td>  
+        <td class='td_center'>CSS3</td>
+        <td class='td_center'>Bootstrap</td>    
+        <td class='td_center'>JAVAScript</td> 
+        <td class='td_center'>JQuery</td>  
+         
+        <td class='td_center'>JAVA</td>  
+        <td class='td_center'>JSP</td>  
+        <td class='td_center'>Spring</td>  
+        <td class='td_center'>Rest</td> 
+        <td class='td_center'>MyBatis</td> 
+        
+        <td class='td_center'>R</td> 
+        <td class='td_center'>Python</td>  
+        <td class='td_center'>Mobile</td>  
+        <td class='td_center'>Tensorflow</td>  
+      </tr>
+  </table>
+ 
+</body>
+</html>

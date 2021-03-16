@@ -1,0 +1,101 @@
+<!--0316
+ [16] <COLGROUP>, 열결합, 행결합 실습, 테이블안의 내용 정렬
+   3. 테이블에 외곽선에 CSS 적용
+  
+   정리 : tr(행 오픈) -> th(행에 해당하는 컬럼의 제목)   /  tr(행 오픈) -> td(행에 해댕하는 열들을 출력)
+  -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>table7.html</title>
+<style type="text/css">
+  *{ font-family: Malgun Gothic; font-size: 26px; color: #555555;}
+  table {
+    border: none;  /* 테이블 외곽선 지정 */
+    border-collapse: collapse;   /* cell 경계선 결합 */
+    width: 70%;
+    margin: 30px auto;
+  }
+
+  thead {
+    background-color: #FF0000;
+    /* color: #FFFFFF; 적용안됨 */
+  }
+  
+  th {
+    border: solid 1px #000000;  /* 외곽선 지정 */
+    color: #FFFFFF;
+  }
+ 
+  td {
+    border: solid 1px #000000;  /* 외곽선 지정 */
+  }
+  
+  tfoot {
+    background: #FFFFFF;
+  }
+  
+  .td_center {
+    text-align: center;
+  }
+  
+  .td_none {
+    border-right: none;
+    border-bottom: none;
+    border-left: none;  
+  }
+ 
+  .td_left_right {
+    border-right: none;
+    border-left: none;  
+  }
+</style>
+</head>
+<body>
+  <table>
+    <caption>Movie top 1.0</caption>
+    <colgroup>
+      <col style="width: 10%;"> 
+      <col style="width: 70%;">
+      <col style="width: 20%;">
+    </colgroup>
+    
+    <thead>
+      <tr>
+        <th class=' td_left_right'>번호</th>  <!-- th 태그에 td_lef_rihgt = none 속성 적용  -->
+        <th class=' td_left_right'>제목</th>
+        <th class=' td_left_right'>년도</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td class='td_center td_left_right' >1</td> <!-- 글짜 가운데 정렬 + 좌우 외각선 삭제 -->
+        <td class='td_left_right td_center'>마션</td>            
+        <td class='td_center td_left_right''>2015</td>
+      </tr>
+      
+      <tr>
+        <td class='td_center td_left_right'>2</td>
+        <td class='td_left_right td_center'>암살</td>
+        <td class='td_center td_left_right''>2016</td>
+      </tr>
+      
+      <tr>
+        <td class='td_center td_left_right'>3</td>
+        <td class='td_left_right td_center'>안시성</td>
+        <td class='td_center td_left_right' >2018</td>
+      </tr>      
+    </tbody>
+    
+    <tfoot>
+      <tr>
+        <td colspan="3" class='td_center td_none'>CGV cinema all right reserved. 2017</td>
+      </tr>
+    </tfoot>
+  </table>
+ 
+ 
+</body>
+</html>

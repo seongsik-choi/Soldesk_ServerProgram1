@@ -1,0 +1,78 @@
+<!--0316
+ [16] <COLGROUP>, 열결합, 행결합 실습, 테이블안의 내용 정렬
+ [01] <COLGROUP>, 열결합, 행결합 실습 
+
+ 1. <COLGROUP> : 컬럼의 그룹으로 지정하여 공통으로 속성 적용
+  - 전체 <TH><TD> 태그에 공통적으로 적용됨, 생략 가능 
+  2. colspan 속성 :열 결합
+  3. rowspan 속성 : 행 결합
+ 
+  [02] TABLE 실습
+  1. <COLGROUP> 실습 :  color 속성은 적용되지 않음
+  
+  .td_center {
+    text-align: center;}   /*.td_center class 적용하여 가운데 정렬*/
+  -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>table5.html</title>
+<style type="text/css">
+  *{ font-family: Malgun Gothic; font-size: 16px; color: #555555;}
+  table {
+    border: solid 1px #000000;  /* 테이블 외곽선 지정 */
+    border-collapse: collapse;   /* cell 경계선 결합 */
+    width: 70%;
+    margin: 30px auto;
+  }
+  th {
+    border: solid 1px #000000;  /* 외곽선 지정 */
+  }
+  td {
+    border: solid 1px #000000;  /* 외곽선 지정 */
+  }
+  .td_center {
+    text-align: center;}
+</style>
+</head>
+<body>
+
+  <table>
+    <caption>Movie top 1.0</caption>
+    
+    <colgroup>  <!-- 컬럼의 그룹으로 지정하여 공통으로 속성 적용, <TH><TD> 태그에 공통적으로 적용 -->
+      <col style="width: 10%; background-color: #CCFF66;">
+      <col style="width: 70%; background-color: #99FF66;">
+      <col style="width: 20%; background-color: #66FF66;">
+    </colgroup>
+    
+    <thead> <!-- 테이블 머리말을 출력하는 태그, 생략 가능 -->
+      <tr>  <!-- 행을 출력  -->
+        <th>번호</th><th>제목</th><th>년도</th> <!-- 컬럼의 제목을 출력하는 태그  -->
+      </tr>
+    </thead>
+    
+    <tbody> <!--  테이블 내용을 출력하는 태그, 생략 가능 -->
+      <tr>
+        <!-- 열을 출력하는 태그, 데이터 출력 -->
+        <td class='td_center'>1</td><td>마션</td><td class='td_center'>2015</td>
+      </tr>
+      <tr>
+        <td class='td_center'>2</td><td>암살</td><td class='td_center'>2016</td>
+      </tr>
+      <tr>
+        <td class='td_center'>3</td><td>안시성</td><td class='td_center'>2018</td>
+      </tr>      
+    </tbody>
+    
+    <tfoot>
+      <tr>
+        <td colspan="3" class='td_center'>CGV cinema all right reserved. 2017</td>
+      </tr>
+    </tfoot>
+  </table>
+ 
+ 
+</body>
+</html>

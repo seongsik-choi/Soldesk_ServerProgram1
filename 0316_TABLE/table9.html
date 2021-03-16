@@ -1,0 +1,109 @@
+<!--0316
+ [16] <COLGROUP>, 열결합, 행결합 실습, 테이블안의 내용 정렬
+   4. 행이 결합된 테이블
+    -> rowspan을 이용한 행 결합
+    1) rowspan으로 결합할 행 크기 지정
+    2) 같은 행을 공유하는 경우  헤더를 주석처리
+    
+    ex) 
+     <tr>
+        <th rowspan='3' >Web 개발</th>     //  1) rowspan으로 결합할 행 크기 지정
+         <td>Client</td>  
+      </tr>
+      
+      <tr>
+        //  <th></th>   2) 같은 행을 공유하는 경우  헤더를 주석처리
+         <td>Server</td>  
+      </tr> 
+   
+   But) 해당 방법은 너무 어려운 난이도 -> 위 코드는 다 지워버리고
+    * 행과 열의 결합이 어려울시 20행 X 20열등의 테이블을 만들고 결합해가면 수월
+    * 복잡한 테이블은 테이블안에 테이블을 포함해서 개발
+    
+    A) 1행 3열짜리 테이블 * 23개 생성
+    <TR> 
+      <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
+      <TD>&nbsp;</TD>
+   </TR>
+   ->
+  -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>table9.html</title>
+<style type="text/css">
+  *{ font-family: Malgun Gothic; font-size: 26px;}
+  table {
+    border: solid 1px #000000;  /* 테이블 외곽선 지정 */
+    border-collapse: collapse;   /* cell 경계선 결합 */
+    width: 80%;
+    margin: 30px auto;
+  }
+  th {
+    border: solid 1px #000000;  /* 외곽선 지정 */
+  }
+ 
+  td {
+    border: solid 1px #000000;  /* 외곽선 지정 */
+    text-align: center; }
+  .td_center {
+    text-align: center;  } 
+</style>
+</head>
+<body>
+
+ <table>
+    <caption>4. 행이 결합된 테이블</caption>
+    
+ <!-- 
+    1) 1행 x열짜리 테이블 * 23개
+    2) 가장 끝 3행 테이블 부터 채우기 
+    3) 두번째 TD에 2행값 넣고 나머지 두번째 TD 들 주석처리 
+    4) 첫번째 TD에 1행값 넣고 나머지 첫번째 TD 들 주석처리
+     
+     첫번째 TD의 span값은 : 3번째 TD의 행값들   / 두번째 TD의 SPAN 값은 각각에 해당되는 TD의 행 값들
+  -->
+
+   <TR><TD rowspan='19'>WEB개발 </TD> <TD rowspan='7'>Client </TD> <TD>HMTL5 </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>CSS5 </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Bootstrap </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>JavaScript </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>jQuery </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Ajax </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>JSON </TD></TR>
+  
+  <TR><!-- <TD> </TD> --><TD rowspan='7'>Server</TD><TD>JAVA</TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>JSP </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Spring Boot </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Spring Cloud </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Spring JPA </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>RESTful </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>MyBatis </TD></TR>
+  
+  <TR><!-- <TD> </TD> --><TD rowspan='5'>DMBS </TD><TD>Oracle </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>MySQL</TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>MariaDB </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Algorithm </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Mobile </TD></TR>
+ 
+  
+  <TR><TD rowspan='11'>4차산업 </TD><TD rowspan='4'>BigDATA </TD><TD>R </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Python </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>통계 </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>SQL </TD></TR>
+  
+  <TR><!-- <TD> </TD> --><TD rowspan='7'>AI</TD><TD>TesorFlow</TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>AI 수학 </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>NLP(자연어 처리) </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Recommendation </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>CNN/RNN/DQN </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Recommendation </TD></TR>
+  <TR><!-- <TD> </TD> --><!-- <TD> </TD> --><TD>Reforcement </TD></TR>  
+    
+      
+  </table>
+  
+</body>
+</html>

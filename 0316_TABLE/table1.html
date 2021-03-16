@@ -1,0 +1,74 @@
+<!--0316
+[15] TABLE 관련 태그, <TABLE>, <COLGROUP>, <CAPTION>, <TR>, <TD> 
+                            <THEAD>, <TBODY>, <TFOOT> 태그 
+ [01] TABLE 관련 태그
+   - <TABLE>, <CAPTION>, <COLGROUP>, <TR>, <TD>, 
+      <THEAD>, <TBODY>, <TFOOT> 태그
+   - 행과 열의 구조를 갖는 양식 제작시 사용, 게시판 형태의 컨텐츠 출력에 사용
+   - 테이블 사용 ex) : Google '이력서, web 재고 관리' 이미지 검색, 기상청 예보 
+
+ 1. <TABLE> : 행과 열의 구조를 출력하는 태그
+ 2. <COLGROUP> : 컬럼의 그룹으로 지정하여 공통으로 속성 적용
+                                 전체 <TH><TD> 태그에 공통적으로 적용됨, 생략 가능 
+ 3. <CAPTION> : 테이블 제목 출력, 생략 가능
+ 4. <TR>: Table Row : 행을 출력하는 태그
+      5. <TH>: Table Header : 컬럼의 제목을 출력하는 태그. 강조 효과와 가운데 정렬을 지원
+                                    <TR> 태그의 구성 요소
+      6. <TD>: Table Data : 열을 출력하는 태그, 데이터 출력
+                                    <TR> 태그의 구성 요소
+
+ 7. <THEAD> : 테이블 머리말을 출력하는 태그, 생략 가능
+ 8. <TBODY> : 테이블 내용을 출력하는 태그, 생략 가능
+ 9. <TFOOT> 태그 : 테이블 하단을 출력하는 태그, 생략 가능
+ 10. colspan 속성 : 열 합치기
+ 11. rowspan 속성  : 행 합치기
+
+[02] TABLE 실습 : 1. 기본 테이블       
+ -> F12로 Elements 확인 시 -> 사용하지 않은 <tbody> 생성 -> 테이블의 내용 의미!                    
+
+ -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>table1.html</title>
+<style type="text/css">
+  *{ font-family: Malgun Gothic; font-size: 26px; color: #555555;}
+  /* style tag 안쪽으로 table tag 지정. */
+  table { /* 테이블 외곽선 지정 */
+    border: solid 5px #555555; 
+    background-color: #FF9900;  
+  }
+  
+</style>
+</head>
+<body>
+
+  <table> <!-- table tag에 의해 외각선과 배경 적용  -->
+ 
+      <tr>    <!-- 행 -->
+        <th>번호</th><th>제목</th><th>년도</th> <!-- th(tr의 구성) : 컬럼제목 -->
+      </tr>
+      
+      <tr>
+        <td>1</td><td>마션</td><td>2015</td>
+      </tr>
+      
+      <tr>
+        <td>2</td><td>암살</td><td>2016</td>
+      </tr>
+      
+      <tr>
+        <td>3</td><td>안시성</td><td>2018</td>
+      </tr>    
+        
+      <tr>
+        <!-- <TD> 3개를 결합 -->
+        <td colspan="3">CGV cinema all right reserved. 2017</td>
+      </tr>
+      
+  </table> <!-- table tag end -->
+ 
+</body>
+</html>
