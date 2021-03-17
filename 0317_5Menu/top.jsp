@@ -12,7 +12,6 @@
     
    -----------------------------------------------------------------------------------
   2. 메뉴 페이지 분리  : index2.html의 body 위 부분만 복사
-  
   - 조각 파일들은 다양한 경로에서 포함됨으로 이미지등의 경로를 절대 경로로 사용
   - background-image: 태그의 배경으로 이미지를 지정 가능, 파일 경로는 절대 경로 지정
   - position: absolute: 무조건 화면 좌측 상단을 기준으로 위치 지정
@@ -22,60 +21,14 @@
   - /WebContent 기준, 프로젝트명(Context Path)은 생략
   - /WebContent/menu/top.jsp 사용의 선언
     <jsp:include page="/menu/top.jsp" flush="false" /> 
+    
+  A2) menu 폴더의 top.jsp와 bottom.jsp를 jsp:include 함
+   <jsp:include page="/menu/top.jsp" flush="false" />
+   -> index.jsp의 <body> 태그 아래로 top.jsp가 include 했기에
+   -> top.jsp는 <body> 태그 전까지 전부 삭제
 --%>
 <!DOCTYPE html>
 <%@ page contentType="text/html; charset=UTF-8" %>
-<html>
-<head>
-<meta charset="EUC-KR">
-<title>index2.html</title>
-<style type="text/css">
-  
-  /* 모든 태그에 적용 */
-  *{
-     font-family: Malgun Gothic; 
-     font-size: 26px; 
-     margin: 0px;  /* top right bottom left */
-     padding: 0px;
-     color: #555555;  }  
-  
-  .container_main {
-    width: 90%; 
-    margin: 10px auto;  }
-  
-  .top_img {
-    width: 100%;
-    height: 200px;
-    background-image: url('/jsp_test/menu/images/top_image.jpg');  }
-  
-  .top_menu {
-    position: relative; /* 부모 태그 기준, 화면 상단 기준*/
-    top: 80%; 
-    background-color: rgba(50, 50, 255, 0.3);  /* 0.3: Alpha, 투명도 */  
-    color: white;   }
-  
-  .left_menu {
-    width: 15%;
-    float: left;  }
-  
-  .content_body {
-    width: 84%;
-    float: left;  }
-  
-  .content_bottom {  }
-  
-  .bottom_menu {
-    text-align: center; 
-    margin: 20px auto;
-    clear: both;  /* 앞쪽 태그의 float 효과를 제거함. */
-  }
-  
-  .li_none {
-    list-style: decimal;  }
-</style>
-</head>
-
-<body>
 <DIV class='container_main'>
   
   <DIV class='top_img'>         <!--  이미지 적용 -->

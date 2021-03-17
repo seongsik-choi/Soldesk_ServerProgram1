@@ -19,6 +19,3 @@
   </DIV>
   
 </DIV> <!-- container_main 종료 -->
-
-</body>
-</html>
