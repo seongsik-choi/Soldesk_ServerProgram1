@@ -46,4 +46,6 @@ ___
 * 0316 : [15] TABLE 관련 태그, TABLE, COLGROUP, CAPTION, TR, TD, THEAD, TBODY, TFOOT 태그  
 * 0316 : [16] COLGROUP, 열결합, 행결합 실습, 테이블안의 내용 정렬, 테이블 안 IMG 삽입  
 ___  
-* 0317 : 
+* 0317 : [17] INPUT type="number", "range", "date", "time" 속성, OPTGROUP, BUTTON, METER, PROGRESS  
+* 0317 : [18] position 속성을 통한 태그의 배치  
+* 0317 : [19] 2단 메뉴의 구성(HTML, CSS만 사용하여 제작)  
