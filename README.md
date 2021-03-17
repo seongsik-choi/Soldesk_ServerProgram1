@@ -44,7 +44,9 @@ ___
 * 0317 : [17] INPUT type="number", "range", "date", "time" 속성, OPTGROUP, BUTTON, METER, PROGRESS  
 * 0317 : [18] position 속성을 통한 태그의 배치  
 * 0317 : [19] 1~2단 메뉴의 구성(HTML, CSS만 사용하여 제작)  
-  * **dropdown.html(2단 deafult 참고)/ dropdown1.html(1단 default 참고)**
+  * **dropdown2.html(2단 드롭다운 deafult 참고)/ dropdown1.html(1단 드롭다운 default 참고)**
 * 0317 : [20] SSI(Server Side Include), index.jsp 제작, 화면 설계, 메뉴 구성   
 * 0317 : [20] SSI(Server Side Include), 화면분할  
-* **index.jsp : top.jsp + bottom.jsp + style.css를 jsp:include로 SSI활용**  
+  * **index1.html(상, 하 메뉴 구성 defalut 참고)/ index2.html(상, 하, 좌측 메뉴 구성 defalut 참고)**  
+  * **index.jsp(top.jsp + bottom.jsp + style.css를 jsp:include로 결합한 SSI 예제)**  
+___  
