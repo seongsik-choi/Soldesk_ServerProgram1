@@ -1,0 +1,51 @@
+<!--0317
+[18] position 속성을 통한 컨텐츠의 배치       
+  [01] position 속성을 통한 컨텐츠의 배치
+   1. static: 태그 초기 위치 설정, 기본 값을 의미
+     -> 포지션 설정을 하지않으면 static(기본값)을 기준으로 적용
+     -position : static;
+  -->
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+ 
+  *{ /* 에스크립터 */
+  font-size : 24px; }
+  
+  #static1 { /* # 키워드를 통해 id임을 언급 */
+    width:100px;
+    height:100px;
+    background-color:green;
+    position: static;   }
+  
+  #static2 {
+    width:100px;
+    height:100px;
+    background-color:yellow;
+    position: static;  }
+  #static3 {
+    width:100px;
+    height:100px;
+    background-color:red;
+    position: static;  }
+</style>
+</head>
+
+<body>
+  <div id="static1">
+  1. static
+  </div>
+  <div id="static2">
+  2. static
+  </div>
+  <div id="static3">
+  3. static
+  </div>
+</body>
+</html>
+
+
+
+
+

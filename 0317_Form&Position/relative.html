@@ -1,0 +1,60 @@
+<!--0317
+[18] position 속성을 통한 컨텐츠의 배치       
+  [01] position 속성을 통한 컨텐츠의 배치
+   2. relative: 주변 태그를 기준으로한 태그 위치 설정
+    - position : relative
+    
+    위치 설정 방법) 그래프 기준 X축은 좌측이 = 0 / y축은 상단이 = 0
+    - top : 앞쪽(상위)에 배치된 TAG 기준 ( ↓ 방향으로)
+    - left : y축 기준 상단이 = 0  ( → 방향으로)
+  -->
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+  *{
+  font-size: 30px; }
+  #static {
+    width:100px;
+    height:100px;
+    background-color:green;
+    color : #FFFFFF;  }
+  
+  #relative2 {
+    width:100px;
+    height:100px;
+    background-color:yellow;
+    position:relative;
+    top:0px;    /* 앞쪽(상위)에 배치된 TAG 기준 ( ↓ 방향으로)  */
+    left:100px; /* y축 기준 상단이 = 0  ( → 방향으로) */
+    color : #FFFFFF;   }
+    
+  #relative3 {
+    width:100px;
+    height:100px;
+    background-color:red;
+    position:relative;
+    top:30px;
+    left:200px;
+    color : #FFFFFF;   }
+    
+</style>
+</head>
+
+<body>
+  <div id="static">
+  1. static
+  </div>
+  <div id="relative2">
+  2. relative
+  </div>
+  <div id="relative3">
+  3. relative
+  </div>
+</body>
+</html>
+
+
+
+
+
