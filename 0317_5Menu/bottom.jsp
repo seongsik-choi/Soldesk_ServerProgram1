@@ -5,6 +5,11 @@
   - /WebContent 기준, 프로젝트명(Context Path)은 생략  
   /WebContent/menu/bottom.jsp 선언
   <jsp:include page="/menu/bottom.jsp" flush="false" />  
+  
+  A2) menu 폴더의 top.jsp와 bottom.jsp를 jsp:include 함
+   <jsp:include page="/menu/bottom.jsp" flush="false" />  
+   -> index.jsp의 가장 밑 <body> 태그와 <html> 태그 위에 bottom.jsp가 include가 했기에
+   -> bottom.jsp 가장 밑  <body> 태그와 <html> 태그는 삭제
 --%>
 <%@ page contentType="text/html; charset=UTF-8" %>
  

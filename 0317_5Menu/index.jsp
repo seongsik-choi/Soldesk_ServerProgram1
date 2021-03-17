@@ -11,10 +11,10 @@
    -> index.jsp의 <body> 태그 아래로 top.jsp가 include 했기에
    -> top.jsp는 <body> 태그 전까지 전부 삭제
    
+  A2) menu 폴더의 top.jsp와 bottom.jsp를 jsp:include 함
    <jsp:include page="/menu/bottom.jsp" flush="false" />  
    -> index.jsp의 가장 밑 <body> 태그와 <html> 태그 위에 bottom.jsp가 include가 했기에
    -> bottom.jsp 가장 밑  <body> 태그와 <html> 태그는 삭제
-   
 --%>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <% request.setCharacterEncoding("utf-8"); %>
