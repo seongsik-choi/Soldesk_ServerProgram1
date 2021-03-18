@@ -50,3 +50,5 @@ ___
   * **index1.html(상, 하 메뉴 구성 defalut 참고)/ index2.html(상, 하, 좌측 메뉴 구성 defalut 참고)**  
   * **index.jsp(top.jsp + bottom.jsp + style.css를 jsp:include로 결합한 SSI 예제)**  
 ___  
+* 0318 : JSP Model 1, 빈즈의 사용  
+  * **Call By Reference 기법을 이용한 객체의 전달**  
