@@ -32,7 +32,7 @@ ___
 ___  
 * 0312 : [11] RADIO, CHECKBOX, FIELDSET 태그 실습  
 * 0312 : [12] 각종 태그의 초기값 설정, HTML 특수 문자 Entity, HTTP 상태 코드  
-* t10_output_form2.jsp : SELECT OPTION, RADIO, CHECKBOX, request.getParameter, request.getParameterValues, .indexOf(배열[]>=0) 복습  
+  * **ex)t10_output_form2.jsp : SELECT OPTION, RADIO, CHECKBOX, request.getParameter, request.getParameterValues, .indexOf(배열[]>=0) 복습**  
 ___   
 * 0315 : 배웠던 내용을 통한 프로그램 만들기(form, proc.jsp)  
 * 0315 : [13] CSS(Cascading Style Sheet)의 사용, SPAN, DIV 기본 사용법, A 태그  
@@ -44,11 +44,11 @@ ___
 * 0317 : [17] INPUT type="number", "range", "date", "time" 속성, OPTGROUP, BUTTON, METER, PROGRESS  
 * 0317 : [18] position 속성을 통한 태그의 배치  
 * 0317 : [19] 1~2단 메뉴의 구성(HTML, CSS만 사용하여 제작)  
-  * **dropdown2.html(2단 드롭다운 deafult 참고)/ dropdown1.html(1단 드롭다운 default 참고)**
+  * **ex)dropdown2.html(2단 드롭다운 deafult 참고)/ dropdown1.html(1단 드롭다운 default 참고)**
 * 0317 : [20] SSI(Server Side Include), index.jsp 제작, 화면 설계, 메뉴 구성   
 * 0317 : [20] SSI(Server Side Include), 화면분할  
-  * **index1.html(상, 하 메뉴 구성 defalut 참고)/ index2.html(상, 하, 좌측 메뉴 구성 defalut 참고)**  
-  * **index.jsp(top.jsp + bottom.jsp + style.css를 jsp:include로 결합한 SSI 예제)**  
+  * **ex)index1.html(상, 하 메뉴 구성 defalut 참고)/ index2.html(상, 하, 좌측 메뉴 구성 defalut 참고)**  
+  * **ex)index.jsp(top.jsp + bottom.jsp + style.css를 jsp:include로 결합한 SSI 예제)**  
 ___  
 * 0318 : JSP Model 1, 빈즈의 사용  
   * **Call By Reference 기법을 이용한 객체의 전달**  
